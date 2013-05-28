@@ -1,0 +1,19 @@
+﻿@model Translation.Models.Translation
+
+
+@{
+    ViewBag.Title = "Translate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Translate</h2>
+
+LanguageCode
+@Html.EditorFor(Model => Model.LanguageCode)<br />
+Phrase
+@Html.EditorFor(Model => Model.Phrase)<br />
+TranslatedText
+@Html.EditorFor(Model => Model.TranslatedText)<br />
+<p>
+    <input type="submit" value="Save" />
+</p>

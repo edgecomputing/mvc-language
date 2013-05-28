@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Translation.Models.Translation>
+
+@using Translation.Service;
+@{
+    ViewBag.Title = "Get All";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetAll</h2>
+<h2>@Html.LanguageConverter("Home","am")</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LanguageCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phrase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TranslatedText)
+        </th>
+        <th></th>
+    </tr>
+
+
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LanguageCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phrase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TranslatedText)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TranslationID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TranslationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TranslationID })
+        </td>
+    </tr>
+}
+
+</table>
