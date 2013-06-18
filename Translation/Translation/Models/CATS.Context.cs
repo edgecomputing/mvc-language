@@ -16,14 +16,14 @@ namespace Translation.Models
     public partial class CATSEntities : DbContext
     {
         public CATSEntities()
-            : base("name=CATSEntities")
+            : base("name=Translation")
         {
         }
     
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    throw new UnintentionalCodeFirstException();
+        //}
     
         public DbSet<Translation> Translations { get; set; }
         public Translation Translation { get; set; }

@@ -21,6 +21,7 @@ using System.Text.RegularExpressions;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Linq.Expressions;
+using Edge.Translation.LanguageService;
 
 
 namespace PetaPoco
@@ -132,6 +133,7 @@ namespace PetaPoco
 
     // Database class ... this is where most of the action happens
     public class Database : IDisposable
+        //public class Database : IDatabase
     {
         public Database(IDbConnection connection)
         {

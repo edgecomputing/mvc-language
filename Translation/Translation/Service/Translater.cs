@@ -11,6 +11,9 @@ namespace Translation.Service
     {
         private CATSEntities db = new CATSEntities();
 
+        
+
+
         public bool Add(Translation.Models.Translation entity)
         {
             
