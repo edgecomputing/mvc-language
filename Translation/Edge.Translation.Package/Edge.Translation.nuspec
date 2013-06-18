@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>LanguageTranslation_0001</id>
+    <version>0.0.01</version>
+    <title>Language Translation Class Lib.</title>
+    <authors>Edge</authors>
+    <owners>Edge</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Class Lib for which will be refered in a service class or extension method.</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    </metadata>
+<files>
+    <file src="Content\web.config.transform" target="content" />
+    </files>
+</package>
