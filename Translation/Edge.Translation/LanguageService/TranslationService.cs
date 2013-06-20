@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+//using System.Web.Mvc;
 using PetaPoco;
 
 namespace Edge.Translation.LanguageService
@@ -150,11 +152,11 @@ namespace Edge.Translation.LanguageService
             return trans.Equals("x");
         }
 
-        //public static void main()
-        //{
-        //    TranslationService ts = new TranslationService();
-        //    string res = ts.GetPhrase("am", "Email");
-           
-        //}
+        //this method returns User profile by taking user name
+        public string getUserLanguageSetig(string userName)
+        {
+            return db.SingleOrDefault<UserProfile>("select * from UserProfile where UserName=@0", userName).LanguageCode;
+        }
+        
     }
 }

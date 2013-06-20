@@ -32,19 +32,19 @@ namespace Translation.Controllers
         //[HttpPost]
         public ActionResult Create(Translation.Models.CATSEntities translation)
         {
-            //try
-            //{
-            //    using (var db = new CATSEntities())
-            //    {
-            //        db.Translations.add(translation);
-            //        db.SaveChanges();
-            //    }
-            //    return RedirectToAction("Index");
-            //}
-            //catch
-            //{
+            try
+            {
+                using (var db = new CATSEntities())
+                {
+                    //db.Translations.add(translation);
+                    db.SaveChanges();
+                }
+                return RedirectToAction("Index");
+            }
+            catch
+            {
                 return View();
-            //}
+            }
         }
        
         public ActionResult GetAll()
