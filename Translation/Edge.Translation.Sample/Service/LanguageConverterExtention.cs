@@ -19,12 +19,14 @@ namespace Translation.Service
             if (helper.ViewContext.HttpContext.User.Identity.IsAuthenticated)
             {
                 string userName = helper.ViewContext.HttpContext.User.Identity.Name;
+                userName = "admin"; //for test ourpus
                 TranslationService ts = new TranslationService();
-                string language = db.SingleOrDefault<UserProfile>("select * from UserProfile where UserName=@0", userName).LanguageCode;
+                
+                var language = db.SingleOrDefault<UserProfile>("select * from UserProfile where UserName=@0", userName).LanguageCode;
                 string str = ts.GetPhrase(language, phrase);
                 if (str != null)
                 {
-                    return ts.GetPhrase(language, phrase);
+                    return str;
                 }
                 else
                 {
