@@ -3,11 +3,16 @@
 @using Translation.Service;
 @{
     ViewBag.Title = "Get All";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>GetAll</h2>
 <h2>@Html.TranslatePhrase("Home")</h2>
+
+
+
+<a href="#" id="username"  >superuser</a>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -45,3 +50,37 @@
 }
 
 </table>
+
+<div id="test">
+
+</div>
+@*@section PageScripts{*@
+    <link href="~/Content/themes/bootstrap-editable.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap-editable.js"></script>
+    <script src="~/Scripts/bootstrap-editable.min.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.intellisense.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$("input#DoB").datepicker();
+            $('a#username').datepicker();
+            (function (event) {
+
+                // prevent default action (going to the another page)
+                event.preventDefault()
+
+                // Do something
+            });
+            var disp=$('#username').editable({
+                //var form=$('<div>').editableform({
+                type: 'text',
+                pk: 1,
+                url: '/post', 
+                title: 'Enter username'
+            });
+            
+            $('#username').editabletypes.text;
+        });
+        
+    </script>

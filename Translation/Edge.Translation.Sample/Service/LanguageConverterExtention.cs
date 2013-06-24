@@ -32,13 +32,15 @@ namespace Translation.Service
                 {
                     // try to see if we can find this phrase in english
                     //Transaction t = new Transaction();
-                    //Transaction.LanguageCode = langauge;
-                    //translation.Phrase = text.Trim();
+                    Edge.Translation.Translation T = new Edge.Translation.Translation();
+                    T.Phrase = phrase;
+                    T.LanguageID=language;
+                    T.TranslatedText = phrase;
                     //translation.TranslatedText = text.Trim();
-                    //this.Add(translation);
+                    db.Insert(T);
 
                     //untill implemented
-                    return ts.GetPhrase("en", phrase);
+                    return ts.GetPhrase(language, phrase);
                 }
             }
             else
